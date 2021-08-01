@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),avicii)
+ifeq ($(TARGET_DEVICE),billie)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
