@@ -1,5 +1,5 @@
 
-LOCAL_PATH := device/oneplus/avicii
+LOCAL_PATH := device/oneplus/billie
 
 # define hardware platform
 PRODUCT_PLATFORM := lito
@@ -18,6 +18,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
