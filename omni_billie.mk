@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := avicii
+PRODUCT_RELEASE_NAME := billie
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
@@ -23,19 +23,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/oneplus/avicii/device.mk)
+$(call inherit-product, device/oneplus/billie/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := avicii
-PRODUCT_NAME := omni_avicii
+PRODUCT_DEVICE := billie
+PRODUCT_NAME := omni_billie
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := OnePlus Nord
+PRODUCT_MODEL := OnePlus 
 PRODUCT_MANUFACTURER := OnePlus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=Nord \
-    BUILD_PRODUCT=Nord \
-    TARGET_DEVICE=Nord
+    PRODUCT_NAME=OnePlusNordN10 \
+    BUILD_PRODUCT=OnePlusNordN10 \
+    TARGET_DEVICE=OnePlusNordN10
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
