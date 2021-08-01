@@ -7,6 +7,8 @@ vendor      /vendor         ext4        slotselect;display="Vendor";logical
 product     /product        ext4        slotselect;display="Product";logical
 odm         /odm            ext4        slotselect;display="Odm";logical
 
+/vendor_image     emmc           /dev/block/mapper/vendor                   flags=slotselect;display="Vendor";flashimg=1;backup=1
+/system_image     emmc           /dev/block/mapper/system                   flags=slotselect;display="System";flashimg=1;backup=1
 /data       f2fs	/dev/block/bootdevice/by-name/userdata          flags=fileencryption=ice:aes-256-cts;wrappedkey;keydirectory=/metadata/vold/metadata_encryption
 /storage    f2fs    /data/media/0                                   flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 /metadata   ext4    /dev/block/bootdevice/by-name/metadata
@@ -23,4 +25,5 @@ odm         /odm            ext4        slotselect;display="Odm";logical
 /op2        ext4    /dev/block/bootdevice/by-name/op2   
 
 # Removable storage
+/external_sd	vfat		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=storage;wipeingui;removable
 /usb_otg    vfat    /dev/block/sdg1             /dev/block/sdg     flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable

@@ -50,4 +50,5 @@ odm                                                     /odm                   e
 /dev/block/bootdevice/by-name/modem                     /vendor/firmware_mnt   ext4    ro,context=u:object_r:firmware_file:s0 wait,slotselect
 /dev/block/bootdevice/by-name/dsp                       /vendor/dsp            ext4    ro,nosuid,nodev,barrier=1                            wait,slotselect
 /dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware    vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait,slotselect
+/dev/block/mmcblk0p1			/external_sd	vfat	nosuid,nodev					wait
 
