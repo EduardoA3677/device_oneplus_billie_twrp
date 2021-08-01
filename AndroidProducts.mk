@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_avicii.mk
+    $(LOCAL_DIR)/omni_billie.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_avicii-user \
-    omni_avicii-userdebug \
-    omni_avicii-eng
+    omni_billie-user \
+    omni_billie-userdebug \
+    omni_billie-eng
