@@ -1,10 +1,10 @@
 # mount point	fstype		device	device2					flags
 # Logical partitions
-system		/system		ext4						slotselect;display="System";logical,first_stage_mount
-system_ext		/system_ext		ext4						slotselect;display="System_EXT";logical,first_stage_mount
-vendor		/vendor		ext4						slotselect;display="Vendor";logical,first_stage_mount
-product		/product	ext4						slotselect;display="Product";logical,first_stage_mount
-odm		/odm		ext4						slotselect;display="Odm";logical,first_stage_mount
+/system	 ext4	   /dev/block/mapper/system						slotselect;display="System";logical,first_stage_mount
+/system_ext	ext4	  /dev/block/mapper/system_ext						slotselect;display="System_EXT";logical,first_stage_mount
+/vendor	 ext4	    /dev/block/mapper/vendor						slotselect;display="Vendor";logical,first_stage_mount
+/product	ext4   	/dev/block/mapper/product						slotselect;display="Product";logical,first_stage_mount
+/odm	ext4   	/dev/block/mapper/odm						slotselect;display="Odm";logical,first_stage_mount
 
 # Physical partitions
 /metadata	ext4		/dev/block/bootdevice/by-name/metadata		flags=backup=1;display="Metadata"
