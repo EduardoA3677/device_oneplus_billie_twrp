@@ -3,6 +3,7 @@
 /cache      ext4    /dev/block/bootdevice/by-name/cache            flags=display="Cache";wipeingui;wipeduringfactoryreset
 
 system		/dev/block/mapper/system		ext4						slotselect;display="System";logical,first_stage_mount
+system_ext		/dev/block/mapper/system_ext		ext4						slotselect;display="System_ext";logical,first_stage_mount
 vendor		/dev/block/mapper/vendor		ext4						slotselect;display="Vendor";logical,first_stage_mount
 product		/dev/block/mapper/product	ext4						slotselect;display="Product";logical,first_stage_mount
 odm		    /dev/block/mapper/odm		  ext4						slotselect;display="Odm";logical,first_stage_mount
