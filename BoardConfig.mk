@@ -128,7 +128,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP specific build flags
 TW_DEVICE_VERSION := 1_EduardoA3677
-BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
