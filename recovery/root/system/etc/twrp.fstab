@@ -1,10 +1,10 @@
 # mount point	fstype		device	device2					flags
 # Logical partitions
-/system	 ext4	   /dev/block/mapper/system						slotselect;display="System";logical,first_stage_mount
-/system_ext	ext4	  /dev/block/mapper/system_ext						slotselect;display="System_EXT";logical,first_stage_mount
-/vendor	 ext4	    /dev/block/mapper/vendor						slotselect;display="Vendor";logical,first_stage_mount
-/product	ext4   	/dev/block/mapper/product						slotselect;display="Product";logical,first_stage_mount
-/odm	ext4   	/dev/block/mapper/odm						slotselect;display="Odm";logical,first_stage_mount
+/system	 ext4	   /dev/block/mapper/system						flags=slotselect;removable
+/system_ext	ext4	  /dev/block/mapper/system_ext						flags=slotselect;removable
+/vendor	 ext4	    /dev/block/mapper/vendor						flags=slotselect;removable
+/product	ext4   	/dev/block/mapper/product						flags=slotselect;removable
+/odm	ext4   	/dev/block/mapper/odm						flags=slotselect;removable
 
 # Physical partitions
 /metadata	ext4		/dev/block/bootdevice/by-name/metadata		flags=backup=1;display="Metadata"
@@ -24,5 +24,5 @@
 /op2		ext4		/dev/block/bootdevice/by-name/op2 
 
 # Removable storage
-/external_sd	vfat		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=storage;wipeingui;removable
+/external_sd	vfat		/dev/block/mmcblk0p1	/dev/block/mmcblk0	flags=fsflags=utf8;display="MicroSD"storage;wipeingui;removable
 /usb-otg	auto		/dev/block/sdg1	/dev/block/sdg			flags=display="USB-OTG";storage;wipeingui;removable
