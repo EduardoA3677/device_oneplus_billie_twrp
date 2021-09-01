@@ -24,5 +24,16 @@
 /op2		ext4		/dev/block/bootdevice/by-name/op2 
 
 # Removable storage
-/external_sd	auto		/dev/block/mmcblk0p1		flags=fsflags=utf8;display="MicroSD"storage;wipeingui;removable
 /usb-otg	auto		/dev/block/sdg1	/dev/block/sdg			flags=display="USB-OTG";storage;wipeingui;removable
+/external_sd	vfat	/dev/block/mmcblk0p1												flags=fsflags="nosuid,nodev,utf8";display="Micro SD Card";storage;wipeingui;removable
+#new partitions
+/super          emmc    /dev/block/bootdevice/by-name/super                                 flags=slotselect;display="super";backup=1;flashimg=1
+
+# AVB partitions
+/dtbo			emmc	/dev/block/bootdevice/by-name/dtbo									flags=slotselect;display="DTBO";backup=1;flashimg=1
+/vbmeta			emmc	/dev/block/bootdevice/by-name/vbmeta								flags=slotselect;display="VBMeta";backup=1;flashimg=1
+/vbmeta_system	emmc	/dev/block/bootdevice/by-name/vbmeta_system							flags=slotselect;display="VBMeta System";backup=1;flashimg=1
+
+# Persistent Firmware & Properties
+/persist		ext4	/dev/block/bootdevice/by-name/persist 								flags=slotselect;display="Persist";fsflags=ro
+/persist_image	emmc	/dev/block/bootdevice/by-name/persist 								flags=slotselect;display="Persist";backup=1
