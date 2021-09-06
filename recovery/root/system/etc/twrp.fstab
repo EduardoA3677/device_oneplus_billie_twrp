@@ -25,7 +25,8 @@
 
 # Removable storage
 /usb-otg	auto		/dev/block/sdg1	/dev/block/sdg			flags=display="USB-OTG";storage;wipeingui;removable
-/external_sd	vfat	/dev/block/mmcblk0p1												flags=fsflags="nosuid,nodev,utf8";display="Micro SD Card";storage;wipeingui;removable
+/external_sd	vfat	/dev/block/mmcblk0p1						/dev/block/mmcblk0		flags=display="Micro SD Card";storage;wipeingui;removable
+
 #new partitions
 /super          emmc    /dev/block/bootdevice/by-name/super                                 flags=slotselect;display="super";backup=1;flashimg=1
 
