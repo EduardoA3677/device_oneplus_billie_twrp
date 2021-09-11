@@ -128,7 +128,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 # TWRP specific build flags
 TW_DEVICE_VERSION := 1_EduardoA3677
-RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
@@ -184,6 +183,9 @@ TARGET_USES_LOGD := true
 TW_NO_USB_STORAGE := true
 PLATFORM_VERSION := 16.1.0
 #TW_OVERRIDE_SYSTEM_PROPS := "ro.build.version.security_patch;ro.vendor.build.security_patch;ro.build.version.release"
+
+# Remove the ability to encrypt backups with a password
+TW_EXCLUDE_ENCRYPTED_BACKUPS := false
 
 # Decryption Fix for Some ROMs
 BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
