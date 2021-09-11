@@ -35,3 +35,5 @@
 /dev/block/bootdevice/by-name/misc	/misc		emmc    defaults					defaults
 /dev/block/bootdevice/by-name/op2	/op2		ext4    noatime,nosuid,nodev,barrier=1,data=ordered	wait,check
 /dev/block/bootdevice/by-name/persist	/mnt/vendor/persist	ext4    noatime,nosuid,nodev,barrier=1		wait
+
+/sdcard        auto      /dev/block/mmcblk1p*                               flags=storage;wipeingui;removable;
