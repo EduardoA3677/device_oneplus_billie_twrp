@@ -18,7 +18,7 @@
 PRODUCT_RELEASE_NAME := billie
 
 
-Inherit from common AOSP config
+# Inherit from common AOSP config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit some common TWRP stuff.
