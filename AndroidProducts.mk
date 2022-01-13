@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_billie.mk
+    $(LOCAL_DIR)/twrp_billie.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_billie-user \
-    omni_billie-userdebug \
-    omni_billie-eng
+    twrp_billie-user \
+    twrp_billie-userdebug \
+    twrp_billie-eng
