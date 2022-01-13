@@ -17,17 +17,19 @@
 # Release name
 PRODUCT_RELEASE_NAME := billie
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+Inherit from common AOSP config
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/oneplus/billie/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := billie
-PRODUCT_NAME := omni_billie
+PRODUCT_NAME := twrp_billie
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := OnePlus 
 PRODUCT_MANUFACTURER := OnePlus
